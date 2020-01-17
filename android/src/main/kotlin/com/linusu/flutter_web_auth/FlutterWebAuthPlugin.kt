@@ -30,6 +30,8 @@ class FlutterWebAuthPlugin(private val context: Context): MethodCallHandler {
       val url = Uri.parse(call.argument<String>("url"))
       val callbackUrlScheme = call.argument<String>("callbackUrlScheme")!!
 
+      println(callbackUrlScheme);
+
       callbacks.put(callbackUrlScheme, result)
 
       val intent = CustomTabsIntent.Builder().build()
