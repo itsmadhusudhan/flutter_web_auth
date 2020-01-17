@@ -9,7 +9,8 @@ public class CallbackActivity: Activity() {
     super.onCreate(savedInstanceState)
 
     val url = getIntent()?.getData() as? Uri
-    val scheme = url?.getScheme()
+    val scheme = "callbackUrlScheme";
+    //url?.getScheme()
 
     println(scheme);
     println(url.toString());

@@ -32,7 +32,7 @@ class FlutterWebAuthPlugin(private val context: Context): MethodCallHandler {
 
       println(callbackUrlScheme);
 
-      callbacks.put(callbackUrlScheme, result)
+      callbacks.put("callbackUrlScheme", result)
 
       val intent = CustomTabsIntent.Builder().build()
       val keepAliveIntent = Intent().setClassName(context.getPackageName(), KeepAliveService::class.java.canonicalName)
